@@ -7,6 +7,16 @@ function updateList() {
 
     document.querySelectorAll('.nav-dot')[[...document.querySelectorAll('h1, h2')].indexOf(titles[0])].classList.add('selected-circle')
 }
-// updateList();
 
 window.addEventListener('scroll', updateList);
+
+const navbar = document.querySelector('.nnav')
+const hamburger = document.querySelector('.hamburger')
+const icon = document.querySelectorAll('.mobile-nav-icon')
+console.log(icon)
+
+hamburger.addEventListener('click', () => {
+    navbar.classList.toggle('translate-x-full')
+    icon[0].classList.toggle('hidden')
+    icon[1].classList.toggle('hidden')
+})

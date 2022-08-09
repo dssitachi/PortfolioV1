@@ -6,33 +6,70 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dipesh Ss - Frontend Developer</title>
-    <link href="./output.css" rel="stylesheet">
+    <link href="../dist/output.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
-
+    <script src="main.js" defer></script>
 </head>
 
 <body class="bg-body text-white font-poppins pb-12">
 
     <!-- Navigation -->
     <header class="py-6">
+        <div class="hamburger md:hidden z-10 absolute right-10 cursor-pointer">
+            <svg class="mobile-nav-icon" width="26" height="18" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 10.5H7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M21 6.5H3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M21 14.5H3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M21 18.5H7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+
+            <svg class="mobile-nav-icon hidden" xmlns="http://www.w3.org/2000/svg" width="26" height="18" viewBox="0 0 24 25" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-x">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </div>
         <div class="container flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
             <div class="text-lg font-bold">Dipesh Ss.</div>
-            <div class="hidden md:flex space-x-12 items-center">
-                <a href="#" class="text-selected-text">Home</a>
-                <a href="#work">Experience</a>
-                <a href="#clients">Work</a>
-                <a href="#contact"> <button class="px-6 py-2 bg-theme font-bold">Contact Me</button></a>
-            </div>
-            <div class="md:hidden">
-                <svg width="26" height="18" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M21 10.5H7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M21 6.5H3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M21 14.5H3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M21 18.5H7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>                    
-            </div>
+            <nav>
+                <ul class="hidden md:flex space-x-12 items-center navbar">
+                    <li>
+                        <a href="#" class="text-selected-text">Home</a>
+                    </li>
+                    <li>
+                        <a href="#work">Experience</a>
+                    </li>
+                    <li>
+                        <a href="#clients">Work</a>
+                    </li>
+                    <li>
+                        <a href="#contact"> <button class="px-6 py-2 bg-theme font-bold">Contact Me</button></a>
+                    </li>
+                </ul>
+            </nav>
+
+
+            <nav
+                class="md:hidden nnav transform transition translate-x-full absolute top-0 right-0 h-screen w-8/12 bg-mobile-nav ease-in-duration-300">
+                <ul class="flex flex-col space-y-12 mobile-padding">
+                    <li>
+                        <a href="#" class="text-selected-text">Home</a>
+                    </li>
+                    <li>
+                        <a href="#work">Experience</a>
+                    </li>
+                    <li>
+                        <a href="#clients">Work</a>
+                    </li>
+                    <li>
+                        <a href="#contact"> <button class="px-6 py-2 bg-theme font-bold">Contact Me</button></a>
+                    </li>
+                </ul>
+            </nav>
+
         </div>
     </header>
 
@@ -55,11 +92,12 @@
                         <span class="bg-black px-2 py-1 rounded-md ml-10 opacity-0">Contact Me</span>
                     </a>
                 </div>
-            
+
             </nav>
 
             <div class="flex flex-wrap lg:ml-20 justify-center md:justify-start max-w-xl mt-0 md:my-36">
-                <h1 class="font-bold text-5xl md:6xl lg:7xl text-center md:text-left">Crafting<br> elegent Experiences on the web.
+                <h1 class="font-bold text-5xl md:6xl lg:7xl text-center md:text-left">Crafting<br> elegent Experiences
+                    on the web.
                 </h1>
                 <div class="w-full flext justify-center md:justify-start">
                     <button class="px-8 py-4 bg-theme text-white font-bold mt-12 flex items-center space-x-3">
@@ -96,7 +134,8 @@
             <!-- Experience -->
 
             <div class="space-y-12 my-16">
-                <div class="w-full border border-nav p-16 lg:px-32 lg:py-20 lg:space-x-32 flex justify-center lg:justify-start flex-wrap lg:flex-nowrap">
+                <div
+                    class="w-full border border-nav p-16 lg:px-32 lg:py-20 lg:space-x-32 flex justify-center lg:justify-start flex-wrap lg:flex-nowrap">
 
                     <!-- Logo -->
                     <div class="mb-6 lg:mb-0"></div>
@@ -108,12 +147,14 @@
                             <div class="badge">Frontend Development</div>
                         </div>
 
-                        <p class="text-secondary">I am currently working on migration of a project from desktop application to Web.</p>
+                        <p class="text-secondary">I am currently working on migration of a project from desktop
+                            application to Web.</p>
                     </div>
 
                 </div>
 
-                <div class="w-full border border-nav p-16 lg:px-32 lg:py-20 lg:space-x-32 flex justify-center lg:justify-start flex-wrap lg:flex-nowrap">
+                <div
+                    class="w-full border border-nav p-16 lg:px-32 lg:py-20 lg:space-x-32 flex justify-center lg:justify-start flex-wrap lg:flex-nowrap">
 
                     <!-- Logo -->
                     <div class="mb-6 lg:mb-0"></div>
@@ -125,12 +166,14 @@
                             <div class="badge">Frontend Development</div>
                         </div>
 
-                        <p class="text-secondary">I am currently working on migration of a project from desktop application to Web.</p>
+                        <p class="text-secondary">I am currently working on migration of a project from desktop
+                            application to Web.</p>
                     </div>
 
                 </div>
 
-                <div class="w-full border border-nav p-16 lg:px-32 lg:py-20 lg:space-x-32 flex justify-center lg:justify-start flex-wrap lg:flex-nowrap">
+                <div
+                    class="w-full border border-nav p-16 lg:px-32 lg:py-20 lg:space-x-32 flex justify-center lg:justify-start flex-wrap lg:flex-nowrap">
 
                     <!-- Logo -->
                     <div class="mb-6 lg:mb-0"></div>
@@ -142,7 +185,8 @@
                             <div class="badge">Frontend Development</div>
                         </div>
 
-                        <p class="text-secondary">I am currently working on migration of a project from desktop application to Web.</p>
+                        <p class="text-secondary">I am currently working on migration of a project from desktop
+                            application to Web.</p>
                     </div>
 
                 </div>
@@ -152,7 +196,7 @@
     </div>
 
     <div class="container mt-64 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
-          <section class="w-full">
+        <section class="w-full">
             <h2 id="contact" class="secondary-title">Contact Me</h2>
             <p class="section-paragraph">Feel free to contact me at any time!!</p>
 
@@ -173,11 +217,10 @@
                     <button class="px-6 py-2 bg-theme text-white font-bold"> Say Hello!</button>
                 </div>
             </div>
-          </section>  
-            
+        </section>
+
     </div>
 
-    <script src="main.js"></script>
 </body>
 
 </html>
